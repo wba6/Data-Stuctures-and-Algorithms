@@ -3,7 +3,7 @@
 //
 
 #include <vector>
-void BubbleShort(std::vector<int>& vals) {
+void BubbleSort(std::vector<int>& vals) {
         for(int i = 0;i<vals.size(); i++ ){
             for (int j = 0; j < vals.size()-i-1; ++j) {
                 if(vals.at(j) > vals.at(j+1)){
