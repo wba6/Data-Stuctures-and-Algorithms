@@ -16,3 +16,21 @@ void BubbleSort(std::vector<int>& vals) {
             }
         }
 };
+
+void SelectionSort(std::vector<int>& vals) {
+        //loop through n times or the size of the list
+        for (int i = 0; i < vals.size(); ++i) {
+            //store the current first position in the loop or the place where the min number should be
+            int minIndex = i;
+            //loop through list n-i times
+            for (int j = i; j < vals.size(); ++j) {
+                //compare if current index is less then min
+                if(vals.at(j) < vals.at(minIndex)){
+                    //set new min index
+                    minIndex = j;
+                }
+            }
+            //swap current i with min and loop back to start ignoring last index
+            std::iter_swap(&vals.at(i),&vals.at(minIndex));
+        }
+};
